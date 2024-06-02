@@ -131,6 +131,7 @@
 <style>
     @layer components {
         .Input {
+            position: relative;
             display: block;
         }
         .Input__container {
@@ -195,8 +196,8 @@
         }
         .Input__label[data-placement="overlap"] {
             position: absolute;
-            top: 1px;
-            left: 1.125rem;
+            top: -0.5rem;
+            left: 0.625rem;
             z-index: 1;
             padding-left: 0.25rem;
             padding-right: 0.25rem;
@@ -206,8 +207,8 @@
         }
         .Input__label[data-placement="inline"] {
             position: absolute;
-            top: 1.125rem;
-            left: 1.375rem;
+            top: 0.5rem;
+            left: 0.75rem;
             z-index: 1;
             font-size: var(--font-size-xs);
             line-height: 1rem;
