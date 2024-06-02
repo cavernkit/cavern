@@ -10,6 +10,7 @@ interface $$__sveltets_2_IsomorphicComponent<Props extends Record<string, any> =
     z_$$bindings?: Bindings;
 }
 declare const Breadcrumb: $$__sveltets_2_IsomorphicComponent<{
+    class?: string | undefined;
     links: {
         label: string;
         href: string;

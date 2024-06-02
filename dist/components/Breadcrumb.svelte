@@ -1,8 +1,11 @@
 <script lang="ts">import Icon from "./icons/Icon.svelte";
-let { links } = $props();
+let {
+  links,
+  class: className
+} = $props();
 </script>
 
-<nav aria-label="Breadcrumb">
+<nav class={className} aria-label="Breadcrumb">
     <ol>
         {#each links as { label, href }, i}
             <li>
