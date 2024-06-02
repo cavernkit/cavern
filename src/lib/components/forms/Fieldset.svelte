@@ -30,7 +30,7 @@
     let {
         legend,
         description,
-        value,
+        value = $bindable(),
         options,
         required = false,
         disabled = false,

@@ -1,4 +1,4 @@
-import { SvelteComponent } from "svelte";
+/// <reference types="svelte" />
 export type Role = "img" | "presentation" | "status";
 export type Size = "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
 export type Color = "light" | "disabled" | "primary" | "success" | "warning" | "error" | "info";
@@ -7,34 +7,26 @@ export declare const icons: Record<IconName, {
     box: string;
     svg: string;
 }>;
-declare const __propDef: {
-    props: {
-        name: IconName;
-        size?: Size | undefined;
-        role?: Role | undefined;
-        dark?: boolean | undefined;
-        color?: Color | undefined;
-        class?: string | undefined;
-        label?: string | undefined;
-    };
-    events: {
-        [evt: string]: CustomEvent<any>;
-    };
-    slots: {};
-};
-export type IconProps = typeof __propDef.props;
-export type IconEvents = typeof __propDef.events;
-export type IconSlots = typeof __propDef.slots;
-export default class Icon extends SvelteComponent<IconProps, IconEvents, IconSlots> {
-    constructor(options?: import("svelte").ComponentConstructorOptions<{
-        name: IconName;
-        size?: Size | undefined;
-        role?: Role | undefined;
-        dark?: boolean | undefined;
-        color?: Color | undefined;
-        class?: string | undefined;
-        label?: string | undefined;
-    }>);
-    $$bindings: "";
+interface $$__sveltets_2_IsomorphicComponent<Props extends Record<string, any> = any, Events extends Record<string, any> = any, Slots extends Record<string, any> = any, Exports = {}, Bindings = string> {
+    new (options: import('svelte').ComponentConstructorOptions<Props>): import('svelte').SvelteComponent<Props, Events, Slots> & {
+        $$bindings?: Bindings;
+    } & Exports;
+    (internal: unknown, props: Props & {
+        $$events?: Events;
+        $$slots?: Slots;
+    }): Exports;
+    z_$$bindings?: Bindings;
 }
-export {};
+declare const Icon: $$__sveltets_2_IsomorphicComponent<{
+    name: IconName;
+    size?: Size | undefined;
+    role?: Role | undefined;
+    dark?: boolean | undefined;
+    color?: Color | undefined;
+    class?: string | undefined;
+    label?: string | undefined;
+}, {
+    [evt: string]: CustomEvent<any>;
+}, {}, Record<string, any>, "">;
+type Icon = InstanceType<typeof Icon>;
+export default Icon;

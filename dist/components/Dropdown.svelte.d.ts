@@ -1,28 +1,21 @@
-import { SvelteComponent } from "svelte";
 import type { Placement } from "@floating-ui/dom";
 import type { Snippet } from "svelte";
-declare const __propDef: {
-    props: {
-        open?: boolean | undefined;
-        placement?: Placement | undefined;
-        children: Snippet;
-    };
-    events: {
-        [evt: string]: CustomEvent<any>;
-    };
-    slots: {};
-};
-export type DropdownProps = typeof __propDef.props;
-export type DropdownEvents = typeof __propDef.events;
-export type DropdownSlots = typeof __propDef.slots;
-export default class Dropdown extends SvelteComponent<DropdownProps, DropdownEvents, DropdownSlots> {
-    constructor(options?: import("svelte").ComponentConstructorOptions<{
-        open?: boolean | undefined;
-        placement?: Placement | undefined;
-        children: (this: void) => typeof import("svelte").SnippetReturn & {
-            _: "functions passed to {@render ...} tags must use the `Snippet` type imported from \"svelte\"";
-        };
-    }>);
-    $$bindings: "";
+interface $$__sveltets_2_IsomorphicComponent<Props extends Record<string, any> = any, Events extends Record<string, any> = any, Slots extends Record<string, any> = any, Exports = {}, Bindings = string> {
+    new (options: import('svelte').ComponentConstructorOptions<Props>): import('svelte').SvelteComponent<Props, Events, Slots> & {
+        $$bindings?: Bindings;
+    } & Exports;
+    (internal: unknown, props: Props & {
+        $$events?: Events;
+        $$slots?: Slots;
+    }): Exports;
+    z_$$bindings?: Bindings;
 }
-export {};
+declare const Dropdown: $$__sveltets_2_IsomorphicComponent<{
+    open?: boolean | undefined;
+    placement?: Placement | undefined;
+    children: Snippet;
+}, {
+    [evt: string]: CustomEvent<any>;
+}, {}, Record<string, any>, "open">;
+type Dropdown = InstanceType<typeof Dropdown>;
+export default Dropdown;

@@ -1,28 +1,22 @@
-import { SvelteComponent } from "svelte";
-declare const __propDef: {
-    props: {
-        label: string;
-        active: boolean;
-        completed: boolean;
-        href?: string | undefined;
-        onclick?: ((event: MouseEvent) => unknown) | undefined;
-    };
-    events: {
-        [evt: string]: CustomEvent<any>;
-    };
-    slots: {};
-};
-export type StepProps = typeof __propDef.props;
-export type StepEvents = typeof __propDef.events;
-export type StepSlots = typeof __propDef.slots;
-export default class Step extends SvelteComponent<StepProps, StepEvents, StepSlots> {
-    constructor(options?: import("svelte").ComponentConstructorOptions<{
-        label: string;
-        active: boolean;
-        completed: boolean;
-        href?: string | undefined;
-        onclick?: ((event: MouseEvent) => unknown) | undefined;
-    }>);
-    $$bindings: "";
+/// <reference types="svelte" />
+interface $$__sveltets_2_IsomorphicComponent<Props extends Record<string, any> = any, Events extends Record<string, any> = any, Slots extends Record<string, any> = any, Exports = {}, Bindings = string> {
+    new (options: import('svelte').ComponentConstructorOptions<Props>): import('svelte').SvelteComponent<Props, Events, Slots> & {
+        $$bindings?: Bindings;
+    } & Exports;
+    (internal: unknown, props: Props & {
+        $$events?: Events;
+        $$slots?: Slots;
+    }): Exports;
+    z_$$bindings?: Bindings;
 }
-export {};
+declare const Step: $$__sveltets_2_IsomorphicComponent<{
+    label: string;
+    active: boolean;
+    completed: boolean;
+    href?: string | undefined;
+    onclick?: ((event: MouseEvent) => unknown) | undefined;
+}, {
+    [evt: string]: CustomEvent<any>;
+}, {}, Record<string, any>, "">;
+type Step = InstanceType<typeof Step>;
+export default Step;

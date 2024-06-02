@@ -3,7 +3,7 @@
 <script lang="ts">import CloseButton from "./utils/CloseButton.svelte";
 import { focusTrap, makeFocusable, preventWheel, stopWheel } from "../utils/dom";
 let {
-  open = false,
+  open = $bindable(false),
   title,
   class: className,
   placement = "center",

@@ -1,29 +1,23 @@
-import { SvelteComponent } from "svelte";
+/// <reference types="svelte" />
 import type { Color, Role, Size } from "./Icon.svelte";
-declare const __propDef: {
-    props: {
-        role?: Role | undefined;
-        size?: Size | undefined;
-        color?: Color | undefined;
-        class?: string | undefined;
-        label?: string | undefined;
-    };
-    events: {
-        [evt: string]: CustomEvent<any>;
-    };
-    slots: {};
-};
-export type SpinnerProps = typeof __propDef.props;
-export type SpinnerEvents = typeof __propDef.events;
-export type SpinnerSlots = typeof __propDef.slots;
-export default class Spinner extends SvelteComponent<SpinnerProps, SpinnerEvents, SpinnerSlots> {
-    constructor(options?: import("svelte").ComponentConstructorOptions<{
-        role?: Role | undefined;
-        size?: Size | undefined;
-        color?: Color | undefined;
-        class?: string | undefined;
-        label?: string | undefined;
-    }>);
-    $$bindings: "";
+interface $$__sveltets_2_IsomorphicComponent<Props extends Record<string, any> = any, Events extends Record<string, any> = any, Slots extends Record<string, any> = any, Exports = {}, Bindings = string> {
+    new (options: import('svelte').ComponentConstructorOptions<Props>): import('svelte').SvelteComponent<Props, Events, Slots> & {
+        $$bindings?: Bindings;
+    } & Exports;
+    (internal: unknown, props: Props & {
+        $$events?: Events;
+        $$slots?: Slots;
+    }): Exports;
+    z_$$bindings?: Bindings;
 }
-export {};
+declare const Spinner: $$__sveltets_2_IsomorphicComponent<{
+    role?: Role | undefined;
+    size?: Size | undefined;
+    color?: Color | undefined;
+    class?: string | undefined;
+    label?: string | undefined;
+}, {
+    [evt: string]: CustomEvent<any>;
+}, {}, Record<string, any>, "">;
+type Spinner = InstanceType<typeof Spinner>;
+export default Spinner;

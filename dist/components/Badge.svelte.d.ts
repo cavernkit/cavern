@@ -1,31 +1,24 @@
-import { SvelteComponent } from "svelte";
+/// <reference types="svelte" />
 export type Color = "dark" | "primary" | "error" | "warning" | "success" | "info";
-declare const __propDef: {
-    props: {
-        color?: Color | undefined;
-        border?: boolean | undefined;
-        class?: string | undefined;
-        children?: ((this: void) => typeof import("svelte").SnippetReturn & {
-            _: "functions passed to {@render ...} tags must use the `Snippet` type imported from \"svelte\"";
-        }) | undefined;
-    };
-    events: {
-        [evt: string]: CustomEvent<any>;
-    };
-    slots: {};
-};
-export type BadgeProps = typeof __propDef.props;
-export type BadgeEvents = typeof __propDef.events;
-export type BadgeSlots = typeof __propDef.slots;
-export default class Badge extends SvelteComponent<BadgeProps, BadgeEvents, BadgeSlots> {
-    constructor(options?: import("svelte").ComponentConstructorOptions<{
-        color?: Color | undefined;
-        border?: boolean | undefined;
-        class?: string | undefined;
-        children?: ((this: void) => typeof import("svelte").SnippetReturn & {
-            _: "functions passed to {@render ...} tags must use the `Snippet` type imported from \"svelte\"";
-        }) | undefined;
-    }>);
-    $$bindings: "";
+interface $$__sveltets_2_IsomorphicComponent<Props extends Record<string, any> = any, Events extends Record<string, any> = any, Slots extends Record<string, any> = any, Exports = {}, Bindings = string> {
+    new (options: import('svelte').ComponentConstructorOptions<Props>): import('svelte').SvelteComponent<Props, Events, Slots> & {
+        $$bindings?: Bindings;
+    } & Exports;
+    (internal: unknown, props: Props & {
+        $$events?: Events;
+        $$slots?: Slots;
+    }): Exports;
+    z_$$bindings?: Bindings;
 }
-export {};
+declare const Badge: $$__sveltets_2_IsomorphicComponent<{
+    color?: Color | undefined;
+    border?: boolean | undefined;
+    class?: string | undefined;
+    children?: ((this: void) => typeof import("svelte").SnippetReturn & {
+        _: "functions passed to {@render ...} tags must use the `Snippet` type imported from \"svelte\"";
+    }) | undefined;
+}, {
+    [evt: string]: CustomEvent<any>;
+}, {}, Record<string, any>, "">;
+type Badge = InstanceType<typeof Badge>;
+export default Badge;

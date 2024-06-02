@@ -5,7 +5,7 @@
     import { onMount } from "svelte";
 
     let {
-        open = false,
+        open = $bindable(false),
         role,
         arrow = true,
         offset = 8,

@@ -1,29 +1,23 @@
-import { SvelteComponent } from "svelte";
+/// <reference types="svelte" />
 import type { IconName } from "./icons/Icon.svelte";
-declare const __propDef: {
-    props: {
-        label: string;
-        icon: IconName;
-        href?: string | undefined;
-        disabled?: boolean | undefined;
-        onclick?: ((event: MouseEvent) => unknown) | undefined;
-    };
-    events: {
-        [evt: string]: CustomEvent<any>;
-    };
-    slots: {};
-};
-export type NavRailItemProps = typeof __propDef.props;
-export type NavRailItemEvents = typeof __propDef.events;
-export type NavRailItemSlots = typeof __propDef.slots;
-export default class NavRailItem extends SvelteComponent<NavRailItemProps, NavRailItemEvents, NavRailItemSlots> {
-    constructor(options?: import("svelte").ComponentConstructorOptions<{
-        label: string;
-        icon: IconName;
-        href?: string | undefined;
-        disabled?: boolean | undefined;
-        onclick?: ((event: MouseEvent) => unknown) | undefined;
-    }>);
-    $$bindings: "";
+interface $$__sveltets_2_IsomorphicComponent<Props extends Record<string, any> = any, Events extends Record<string, any> = any, Slots extends Record<string, any> = any, Exports = {}, Bindings = string> {
+    new (options: import('svelte').ComponentConstructorOptions<Props>): import('svelte').SvelteComponent<Props, Events, Slots> & {
+        $$bindings?: Bindings;
+    } & Exports;
+    (internal: unknown, props: Props & {
+        $$events?: Events;
+        $$slots?: Slots;
+    }): Exports;
+    z_$$bindings?: Bindings;
 }
-export {};
+declare const NavRailItem: $$__sveltets_2_IsomorphicComponent<{
+    label: string;
+    icon: IconName;
+    href?: string | undefined;
+    disabled?: boolean | undefined;
+    onclick?: ((event: MouseEvent) => unknown) | undefined;
+}, {
+    [evt: string]: CustomEvent<any>;
+}, {}, Record<string, any>, "">;
+type NavRailItem = InstanceType<typeof NavRailItem>;
+export default NavRailItem;

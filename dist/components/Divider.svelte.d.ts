@@ -1,22 +1,19 @@
-import { SvelteComponent } from "svelte";
-declare const __propDef: {
-    props: {
-        text?: string | undefined;
-        spacing?: "none" | "sm" | "md" | "lg" | undefined;
-    };
-    events: {
-        [evt: string]: CustomEvent<any>;
-    };
-    slots: {};
-};
-export type DividerProps = typeof __propDef.props;
-export type DividerEvents = typeof __propDef.events;
-export type DividerSlots = typeof __propDef.slots;
-export default class Divider extends SvelteComponent<DividerProps, DividerEvents, DividerSlots> {
-    constructor(options?: import("svelte").ComponentConstructorOptions<{
-        text?: string | undefined;
-        spacing?: "none" | "sm" | "md" | "lg" | undefined;
-    }>);
-    $$bindings: "";
+/// <reference types="svelte" />
+interface $$__sveltets_2_IsomorphicComponent<Props extends Record<string, any> = any, Events extends Record<string, any> = any, Slots extends Record<string, any> = any, Exports = {}, Bindings = string> {
+    new (options: import('svelte').ComponentConstructorOptions<Props>): import('svelte').SvelteComponent<Props, Events, Slots> & {
+        $$bindings?: Bindings;
+    } & Exports;
+    (internal: unknown, props: Props & {
+        $$events?: Events;
+        $$slots?: Slots;
+    }): Exports;
+    z_$$bindings?: Bindings;
 }
-export {};
+declare const Divider: $$__sveltets_2_IsomorphicComponent<{
+    text?: string | undefined;
+    spacing?: "none" | "sm" | "md" | "lg" | undefined;
+}, {
+    [evt: string]: CustomEvent<any>;
+}, {}, Record<string, any>, "">;
+type Divider = InstanceType<typeof Divider>;
+export default Divider;

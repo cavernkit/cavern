@@ -8,6 +8,10 @@ const config: StorybookConfig = {
             directory: "../src/lib/components",
             titlePrefix: "Components",
         },
+        {
+            directory: "../src/lib/admin/components",
+            titlePrefix: "Admin",
+        },
     ],
     staticDirs: ['../static'],
     core: { disableWhatsNewNotifications: true },

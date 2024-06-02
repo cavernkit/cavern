@@ -8,20 +8,18 @@ const preview: Preview = {
     parameters: {
         layout: "centered",
         options: {
+            // prettier-ignore
             storySort: {
                 method: "alphabetical",
-                order: ["Design System", ["Introduction", "Colors", "Typography", "Icons"], "Components", "*"],
+                order: [
+                    "Design System", ["Introduction", "Colors", "Typography", "Icons"],
+                    "Components",
+                    "Admin",
+                    "*",
+                ],
             },
         },
     },
-    // parameters: {
-    //     controls: {
-    //         matchers: {
-    //             color: /(background|color)$/i,
-    //             date: /Date$/i,
-    //         },
-    //     },
-    // },
 };
 
 export default preview;

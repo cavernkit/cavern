@@ -42,7 +42,7 @@
         label,
         layout = "vertical",
         align,
-        value,
+        value = $bindable(),
         placeholder,
         required,
         disabled,

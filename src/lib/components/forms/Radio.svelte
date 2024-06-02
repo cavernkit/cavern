@@ -6,7 +6,7 @@
         id,
         name,
         label,
-        group,
+        group = $bindable(),
         value,
         disabled = false,
         required = false,

@@ -1,7 +1,7 @@
 <script lang="ts">import * as dom from "@floating-ui/dom";
 import { onMount } from "svelte";
 let {
-  open = false,
+  open = $bindable(false),
   role,
   arrow = true,
   offset = 8,

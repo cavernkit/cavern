@@ -1,23 +1,20 @@
-import { SvelteComponent } from "svelte";
+/// <reference types="svelte" />
 import type { Placement } from "@floating-ui/dom";
-declare const __propDef: {
-    props: {
-        tooltip: string;
-        placement?: Placement | undefined;
-    };
-    events: {
-        [evt: string]: CustomEvent<any>;
-    };
-    slots: {};
-};
-export type TooltipProps = typeof __propDef.props;
-export type TooltipEvents = typeof __propDef.events;
-export type TooltipSlots = typeof __propDef.slots;
-export default class Tooltip extends SvelteComponent<TooltipProps, TooltipEvents, TooltipSlots> {
-    constructor(options?: import("svelte").ComponentConstructorOptions<{
-        tooltip: string;
-        placement?: Placement | undefined;
-    }>);
-    $$bindings: "";
+interface $$__sveltets_2_IsomorphicComponent<Props extends Record<string, any> = any, Events extends Record<string, any> = any, Slots extends Record<string, any> = any, Exports = {}, Bindings = string> {
+    new (options: import('svelte').ComponentConstructorOptions<Props>): import('svelte').SvelteComponent<Props, Events, Slots> & {
+        $$bindings?: Bindings;
+    } & Exports;
+    (internal: unknown, props: Props & {
+        $$events?: Events;
+        $$slots?: Slots;
+    }): Exports;
+    z_$$bindings?: Bindings;
 }
-export {};
+declare const Tooltip: $$__sveltets_2_IsomorphicComponent<{
+    tooltip: string;
+    placement?: Placement | undefined;
+}, {
+    [evt: string]: CustomEvent<any>;
+}, {}, Record<string, any>, "">;
+type Tooltip = InstanceType<typeof Tooltip>;
+export default Tooltip;

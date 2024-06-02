@@ -1,26 +1,21 @@
-import { SvelteComponent } from "svelte";
-declare const __propDef: {
-    props: {
-        links: {
-            label: string;
-            href: string;
-        }[];
-    };
-    events: {
-        [evt: string]: CustomEvent<any>;
-    };
-    slots: {};
-};
-export type BreadcrumbProps = typeof __propDef.props;
-export type BreadcrumbEvents = typeof __propDef.events;
-export type BreadcrumbSlots = typeof __propDef.slots;
-export default class Breadcrumb extends SvelteComponent<BreadcrumbProps, BreadcrumbEvents, BreadcrumbSlots> {
-    constructor(options?: import("svelte").ComponentConstructorOptions<{
-        links: {
-            label: string;
-            href: string;
-        }[];
-    }>);
-    $$bindings: "";
+/// <reference types="svelte" />
+interface $$__sveltets_2_IsomorphicComponent<Props extends Record<string, any> = any, Events extends Record<string, any> = any, Slots extends Record<string, any> = any, Exports = {}, Bindings = string> {
+    new (options: import('svelte').ComponentConstructorOptions<Props>): import('svelte').SvelteComponent<Props, Events, Slots> & {
+        $$bindings?: Bindings;
+    } & Exports;
+    (internal: unknown, props: Props & {
+        $$events?: Events;
+        $$slots?: Slots;
+    }): Exports;
+    z_$$bindings?: Bindings;
 }
-export {};
+declare const Breadcrumb: $$__sveltets_2_IsomorphicComponent<{
+    links: {
+        label: string;
+        href: string;
+    }[];
+}, {
+    [evt: string]: CustomEvent<any>;
+}, {}, Record<string, any>, "">;
+type Breadcrumb = InstanceType<typeof Breadcrumb>;
+export default Breadcrumb;

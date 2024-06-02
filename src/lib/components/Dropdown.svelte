@@ -4,7 +4,7 @@
     import type { Snippet } from "svelte";
 
     let {
-        open = false,
+        open = $bindable(false),
         placement = "bottom-end",
         children,
     }: {
@@ -21,9 +21,7 @@
     trigger="click"
     interactive
     {placement}
-    {open}
-    onshow={() => (open = true)}
-    onhide={() => (open = false)}
+    bind:open
 >
     <ul>
         {@render children()}

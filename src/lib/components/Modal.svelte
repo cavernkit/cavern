@@ -17,7 +17,7 @@
     import type { Snippet } from "svelte";
 
     let {
-        open = false,
+        open = $bindable(false),
         title,
         class: className,
         placement = "center",

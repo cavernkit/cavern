@@ -1,4 +1,4 @@
-import { SvelteComponent } from "svelte";
+/// <reference types="svelte" />
 export interface Tab {
     label: string;
     value: string;
@@ -17,12 +17,18 @@ declare class __sveltets_Render<T extends Tab = Tab> {
         [evt: string]: CustomEvent<any>;
     };
     slots(): {};
+    bindings(): "";
+    exports(): {};
 }
-export type TabListProps<T extends Tab = Tab> = ReturnType<__sveltets_Render<T>['props']>;
-export type TabListEvents<T extends Tab = Tab> = ReturnType<__sveltets_Render<T>['events']>;
-export type TabListSlots<T extends Tab = Tab> = ReturnType<__sveltets_Render<T>['slots']>;
-export default class TabList<T extends Tab = Tab> extends SvelteComponent<TabListProps<T>, TabListEvents<T>, TabListSlots<T>> {
-    constructor(options: import('svelte').ComponentConstructorOptions<ReturnType<__sveltets_Render<T>['props']>>);
-    $$bindings: "";
+interface $$IsomorphicComponent {
+    new <T extends Tab = Tab>(options: import('svelte').ComponentConstructorOptions<ReturnType<__sveltets_Render<T>['props']>>): import('svelte').SvelteComponent<ReturnType<__sveltets_Render<T>['props']>, ReturnType<__sveltets_Render<T>['events']>, ReturnType<__sveltets_Render<T>['slots']>> & {
+        $$bindings?: ReturnType<__sveltets_Render<T>['bindings']>;
+    } & ReturnType<__sveltets_Render<T>['exports']>;
+    <T extends Tab = Tab>(internal: unknown, props: ReturnType<__sveltets_Render<T>['props']> & {
+        $$events?: ReturnType<__sveltets_Render<T>['events']>;
+    }): ReturnType<__sveltets_Render<T>['exports']>;
+    z_$$bindings?: ReturnType<__sveltets_Render<any>['bindings']>;
 }
-export {};
+declare const TabList: $$IsomorphicComponent;
+type TabList<T extends Tab = Tab> = InstanceType<typeof TabList<T>>;
+export default TabList;

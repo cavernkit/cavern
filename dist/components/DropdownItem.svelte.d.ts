@@ -1,31 +1,22 @@
-import { SvelteComponent } from "svelte";
 import type { Snippet } from "svelte";
-declare const __propDef: {
-    props: {
-        label: string;
-        href?: string | undefined;
-        disabled?: boolean | undefined;
-        children: Snippet;
-        onclick?: ((event: MouseEvent) => unknown) | undefined;
-    };
-    events: {
-        [evt: string]: CustomEvent<any>;
-    };
-    slots: {};
-};
-export type DropdownItemProps = typeof __propDef.props;
-export type DropdownItemEvents = typeof __propDef.events;
-export type DropdownItemSlots = typeof __propDef.slots;
-export default class DropdownItem extends SvelteComponent<DropdownItemProps, DropdownItemEvents, DropdownItemSlots> {
-    constructor(options?: import("svelte").ComponentConstructorOptions<{
-        label: string;
-        href?: string | undefined;
-        disabled?: boolean | undefined;
-        children: (this: void) => typeof import("svelte").SnippetReturn & {
-            _: "functions passed to {@render ...} tags must use the `Snippet` type imported from \"svelte\"";
-        };
-        onclick?: ((event: MouseEvent) => unknown) | undefined;
-    }>);
-    $$bindings: "";
+interface $$__sveltets_2_IsomorphicComponent<Props extends Record<string, any> = any, Events extends Record<string, any> = any, Slots extends Record<string, any> = any, Exports = {}, Bindings = string> {
+    new (options: import('svelte').ComponentConstructorOptions<Props>): import('svelte').SvelteComponent<Props, Events, Slots> & {
+        $$bindings?: Bindings;
+    } & Exports;
+    (internal: unknown, props: Props & {
+        $$events?: Events;
+        $$slots?: Slots;
+    }): Exports;
+    z_$$bindings?: Bindings;
 }
-export {};
+declare const DropdownItem: $$__sveltets_2_IsomorphicComponent<{
+    label: string;
+    href?: string | undefined;
+    disabled?: boolean | undefined;
+    children: Snippet;
+    onclick?: ((event: MouseEvent) => unknown) | undefined;
+}, {
+    [evt: string]: CustomEvent<any>;
+}, {}, Record<string, any>, "">;
+type DropdownItem = InstanceType<typeof DropdownItem>;
+export default DropdownItem;

@@ -1,22 +1,19 @@
-import { SvelteComponent } from "svelte";
-declare const __propDef: {
-    props: {
-        type: "warning" | "info";
-        tooltip: string;
-    };
-    events: {
-        [evt: string]: CustomEvent<any>;
-    };
-    slots: {};
-};
-export type HtmlTooltipProps = typeof __propDef.props;
-export type HtmlTooltipEvents = typeof __propDef.events;
-export type HtmlTooltipSlots = typeof __propDef.slots;
-export default class HtmlTooltip extends SvelteComponent<HtmlTooltipProps, HtmlTooltipEvents, HtmlTooltipSlots> {
-    constructor(options?: import("svelte").ComponentConstructorOptions<{
-        type: "warning" | "info";
-        tooltip: string;
-    }>);
-    $$bindings: "";
+/// <reference types="svelte" />
+interface $$__sveltets_2_IsomorphicComponent<Props extends Record<string, any> = any, Events extends Record<string, any> = any, Slots extends Record<string, any> = any, Exports = {}, Bindings = string> {
+    new (options: import('svelte').ComponentConstructorOptions<Props>): import('svelte').SvelteComponent<Props, Events, Slots> & {
+        $$bindings?: Bindings;
+    } & Exports;
+    (internal: unknown, props: Props & {
+        $$events?: Events;
+        $$slots?: Slots;
+    }): Exports;
+    z_$$bindings?: Bindings;
 }
-export {};
+declare const HtmlTooltip: $$__sveltets_2_IsomorphicComponent<{
+    type: "warning" | "info";
+    tooltip: string;
+}, {
+    [evt: string]: CustomEvent<any>;
+}, {}, Record<string, any>, "">;
+type HtmlTooltip = InstanceType<typeof HtmlTooltip>;
+export default HtmlTooltip;

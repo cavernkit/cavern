@@ -1,6 +1,6 @@
 <script lang="ts">import Popup from "./utils/Popup.svelte";
 let {
-  open = false,
+  open = $bindable(false),
   placement = "bottom-end",
   children
 } = $props();
@@ -13,9 +13,7 @@ let {
     trigger="click"
     interactive
     {placement}
-    {open}
-    onshow={() => (open = true)}
-    onhide={() => (open = false)}
+    bind:open
 >
     <ul>
         {@render children()}

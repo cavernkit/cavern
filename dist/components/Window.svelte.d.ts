@@ -1,47 +1,30 @@
-import { SvelteComponent } from "svelte";
 import type { Snippet } from "svelte";
-declare const __propDef: {
-    props: {
-        title: string;
-        width?: string | undefined;
-        height?: string | undefined;
-        placement?: "top-left" | "top-right" | "bottom-left" | "bottom-right" | undefined;
-        scrollable?: boolean | undefined;
-        onclose?: (() => void) | undefined;
-        children: Snippet;
-        actions?: ((this: void) => typeof import("svelte").SnippetReturn & {
-            _: "functions passed to {@render ...} tags must use the `Snippet` type imported from \"svelte\"";
-        }) | undefined;
-        footer?: ((this: void) => typeof import("svelte").SnippetReturn & {
-            _: "functions passed to {@render ...} tags must use the `Snippet` type imported from \"svelte\"";
-        }) | undefined;
-    };
-    events: {
-        [evt: string]: CustomEvent<any>;
-    };
-    slots: {};
-};
-export type WindowProps = typeof __propDef.props;
-export type WindowEvents = typeof __propDef.events;
-export type WindowSlots = typeof __propDef.slots;
-export default class Window extends SvelteComponent<WindowProps, WindowEvents, WindowSlots> {
-    constructor(options?: import("svelte").ComponentConstructorOptions<{
-        title: string;
-        width?: string | undefined;
-        height?: string | undefined;
-        placement?: "top-left" | "top-right" | "bottom-left" | "bottom-right" | undefined;
-        scrollable?: boolean | undefined;
-        onclose?: (() => void) | undefined;
-        children: (this: void) => typeof import("svelte").SnippetReturn & {
-            _: "functions passed to {@render ...} tags must use the `Snippet` type imported from \"svelte\"";
-        };
-        actions?: ((this: void) => typeof import("svelte").SnippetReturn & {
-            _: "functions passed to {@render ...} tags must use the `Snippet` type imported from \"svelte\"";
-        }) | undefined;
-        footer?: ((this: void) => typeof import("svelte").SnippetReturn & {
-            _: "functions passed to {@render ...} tags must use the `Snippet` type imported from \"svelte\"";
-        }) | undefined;
-    }>);
-    $$bindings: "";
+interface $$__sveltets_2_IsomorphicComponent<Props extends Record<string, any> = any, Events extends Record<string, any> = any, Slots extends Record<string, any> = any, Exports = {}, Bindings = string> {
+    new (options: import('svelte').ComponentConstructorOptions<Props>): import('svelte').SvelteComponent<Props, Events, Slots> & {
+        $$bindings?: Bindings;
+    } & Exports;
+    (internal: unknown, props: Props & {
+        $$events?: Events;
+        $$slots?: Slots;
+    }): Exports;
+    z_$$bindings?: Bindings;
 }
-export {};
+declare const Window: $$__sveltets_2_IsomorphicComponent<{
+    title: string;
+    width?: string | undefined;
+    height?: string | undefined;
+    placement?: "top-left" | "top-right" | "bottom-left" | "bottom-right" | undefined;
+    scrollable?: boolean | undefined;
+    onclose?: (() => void) | undefined;
+    children: Snippet;
+    actions?: ((this: void) => typeof import("svelte").SnippetReturn & {
+        _: "functions passed to {@render ...} tags must use the `Snippet` type imported from \"svelte\"";
+    }) | undefined;
+    footer?: ((this: void) => typeof import("svelte").SnippetReturn & {
+        _: "functions passed to {@render ...} tags must use the `Snippet` type imported from \"svelte\"";
+    }) | undefined;
+}, {
+    [evt: string]: CustomEvent<any>;
+}, {}, Record<string, any>, "">;
+type Window = InstanceType<typeof Window>;
+export default Window;

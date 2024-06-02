@@ -40,7 +40,15 @@
     },
     "./utils/dom": {
       "import": "./dist/uikit/utils/dom.js",
-      "types": "./dist/uikit/stores/toasts.d.ts"
+      "types": "./dist/uikit/utils/dom.d.ts"
+    },
+    "./admin": {
+      "svelte": "./dist/admin/index.js",
+      "types": "./dist/admin/index.d.ts"
+    },
+    "./admin/adapters/openapi": {
+      "import": "./dist/admin/adapters/openapi/index.js",
+      "types": "./dist/admin/adapters/openapi/index.d.ts"
     }
   },
   "scripts": {

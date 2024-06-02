@@ -1,26 +1,21 @@
-import { SvelteComponent } from "svelte";
-declare const __propDef: {
-    props: {
-        class?: string | undefined;
-        children?: ((this: void) => typeof import("svelte").SnippetReturn & {
-            _: "functions passed to {@render ...} tags must use the `Snippet` type imported from \"svelte\"";
-        }) | undefined;
-    };
-    events: {
-        [evt: string]: CustomEvent<any>;
-    };
-    slots: {};
-};
-export type NavRailProps = typeof __propDef.props;
-export type NavRailEvents = typeof __propDef.events;
-export type NavRailSlots = typeof __propDef.slots;
-export default class NavRail extends SvelteComponent<NavRailProps, NavRailEvents, NavRailSlots> {
-    constructor(options?: import("svelte").ComponentConstructorOptions<{
-        class?: string | undefined;
-        children?: ((this: void) => typeof import("svelte").SnippetReturn & {
-            _: "functions passed to {@render ...} tags must use the `Snippet` type imported from \"svelte\"";
-        }) | undefined;
-    }>);
-    $$bindings: "";
+/// <reference types="svelte" />
+interface $$__sveltets_2_IsomorphicComponent<Props extends Record<string, any> = any, Events extends Record<string, any> = any, Slots extends Record<string, any> = any, Exports = {}, Bindings = string> {
+    new (options: import('svelte').ComponentConstructorOptions<Props>): import('svelte').SvelteComponent<Props, Events, Slots> & {
+        $$bindings?: Bindings;
+    } & Exports;
+    (internal: unknown, props: Props & {
+        $$events?: Events;
+        $$slots?: Slots;
+    }): Exports;
+    z_$$bindings?: Bindings;
 }
-export {};
+declare const NavRail: $$__sveltets_2_IsomorphicComponent<{
+    class?: string | undefined;
+    children?: ((this: void) => typeof import("svelte").SnippetReturn & {
+        _: "functions passed to {@render ...} tags must use the `Snippet` type imported from \"svelte\"";
+    }) | undefined;
+}, {
+    [evt: string]: CustomEvent<any>;
+}, {}, Record<string, any>, "">;
+type NavRail = InstanceType<typeof NavRail>;
+export default NavRail;

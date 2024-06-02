@@ -1,4 +1,4 @@
-import { SvelteComponent } from "svelte";
+/// <reference types="svelte" />
 declare class __sveltets_Render<T extends string | boolean | number | null = string> {
     props(): {
         legend: string;
@@ -30,12 +30,18 @@ declare class __sveltets_Render<T extends string | boolean | number | null = str
         [evt: string]: CustomEvent<any>;
     };
     slots(): {};
+    bindings(): "value";
+    exports(): {};
 }
-export type FieldsetProps<T extends string | boolean | number | null = string> = ReturnType<__sveltets_Render<T>['props']>;
-export type FieldsetEvents<T extends string | boolean | number | null = string> = ReturnType<__sveltets_Render<T>['events']>;
-export type FieldsetSlots<T extends string | boolean | number | null = string> = ReturnType<__sveltets_Render<T>['slots']>;
-export default class Fieldset<T extends string | boolean | number | null = string> extends SvelteComponent<FieldsetProps<T>, FieldsetEvents<T>, FieldsetSlots<T>> {
-    constructor(options: import('svelte').ComponentConstructorOptions<ReturnType<__sveltets_Render<T>['props']>>);
-    $$bindings: "";
+interface $$IsomorphicComponent {
+    new <T extends string | boolean | number | null = string>(options: import('svelte').ComponentConstructorOptions<ReturnType<__sveltets_Render<T>['props']>>): import('svelte').SvelteComponent<ReturnType<__sveltets_Render<T>['props']>, ReturnType<__sveltets_Render<T>['events']>, ReturnType<__sveltets_Render<T>['slots']>> & {
+        $$bindings?: ReturnType<__sveltets_Render<T>['bindings']>;
+    } & ReturnType<__sveltets_Render<T>['exports']>;
+    <T extends string | boolean | number | null = string>(internal: unknown, props: ReturnType<__sveltets_Render<T>['props']> & {
+        $$events?: ReturnType<__sveltets_Render<T>['events']>;
+    }): ReturnType<__sveltets_Render<T>['exports']>;
+    z_$$bindings?: ReturnType<__sveltets_Render<any>['bindings']>;
 }
-export {};
+declare const Fieldset: $$IsomorphicComponent;
+type Fieldset<T extends string | boolean | number | null = string> = InstanceType<typeof Fieldset<T>>;
+export default Fieldset;

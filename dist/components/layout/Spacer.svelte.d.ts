@@ -1,23 +1,24 @@
-/** @typedef {typeof __propDef.props}  SpacerProps */
-/** @typedef {typeof __propDef.events}  SpacerEvents */
-/** @typedef {typeof __propDef.slots}  SpacerSlots */
-export default class Spacer extends SvelteComponent<{
+export default Spacer;
+type Spacer = SvelteComponent<{
     [x: string]: never;
 }, {
     [evt: string]: CustomEvent<any>;
-}, {}> {
+}, {}> & {
+    $$bindings?: string | undefined;
+} & Record<string, any>;
+declare const Spacer: $$__sveltets_2_IsomorphicComponent<{
+    [x: string]: never;
+}, {
+    [evt: string]: CustomEvent<any>;
+}, {}, Record<string, any>, string>;
+interface $$__sveltets_2_IsomorphicComponent<Props extends Record<string, any> = any, Events extends Record<string, any> = any, Slots extends Record<string, any> = any, Exports = {}, Bindings = string> {
+    new (options: import("svelte").ComponentConstructorOptions<Props>): SvelteComponent<Props, Events, Slots> & {
+        $$bindings?: Bindings | undefined;
+    } & Exports;
+    (internal: unknown, props: {
+        $$events?: Events | undefined;
+        $$slots?: Slots | undefined;
+    }): Exports;
+    z_$$bindings?: Bindings | undefined;
 }
-export type SpacerProps = typeof __propDef.props;
-export type SpacerEvents = typeof __propDef.events;
-export type SpacerSlots = typeof __propDef.slots;
 import { SvelteComponent } from "svelte";
-declare const __propDef: {
-    props: {
-        [x: string]: never;
-    };
-    events: {
-        [evt: string]: CustomEvent<any>;
-    };
-    slots: {};
-};
-export {};

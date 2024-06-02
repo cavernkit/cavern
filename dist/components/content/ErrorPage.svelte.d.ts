@@ -1,46 +1,31 @@
-import { SvelteComponent } from "svelte";
-declare const __propDef: {
-    props: {
-        title: string;
-        status?: string | number | null | undefined;
-        message?: string | null | undefined;
-    } & ({
-        actions?: undefined;
-        home?: string | {
-            href: string;
-            label: string;
-        } | undefined;
-    } | {
-        actions?: ((this: void) => typeof import("svelte").SnippetReturn & {
-            _: "functions passed to {@render ...} tags must use the `Snippet` type imported from \"svelte\"";
-        }) | undefined;
-        home?: undefined;
-    });
-    events: {
-        [evt: string]: CustomEvent<any>;
-    };
-    slots: {};
-};
-export type ErrorPageProps = typeof __propDef.props;
-export type ErrorPageEvents = typeof __propDef.events;
-export type ErrorPageSlots = typeof __propDef.slots;
-export default class ErrorPage extends SvelteComponent<ErrorPageProps, ErrorPageEvents, ErrorPageSlots> {
-    constructor(options?: import("svelte").ComponentConstructorOptions<{
-        title: string;
-        status?: string | number | null | undefined;
-        message?: string | null | undefined;
-    } & ({
-        actions?: undefined;
-        home?: string | {
-            href: string;
-            label: string;
-        } | undefined;
-    } | {
-        actions?: ((this: void) => typeof import("svelte").SnippetReturn & {
-            _: "functions passed to {@render ...} tags must use the `Snippet` type imported from \"svelte\"";
-        }) | undefined;
-        home?: undefined;
-    })>);
-    $$bindings: "";
+/// <reference types="svelte" />
+interface $$__sveltets_2_IsomorphicComponent<Props extends Record<string, any> = any, Events extends Record<string, any> = any, Slots extends Record<string, any> = any, Exports = {}, Bindings = string> {
+    new (options: import('svelte').ComponentConstructorOptions<Props>): import('svelte').SvelteComponent<Props, Events, Slots> & {
+        $$bindings?: Bindings;
+    } & Exports;
+    (internal: unknown, props: Props & {
+        $$events?: Events;
+        $$slots?: Slots;
+    }): Exports;
+    z_$$bindings?: Bindings;
 }
-export {};
+declare const ErrorPage: $$__sveltets_2_IsomorphicComponent<{
+    title: string;
+    status?: string | number | null | undefined;
+    message?: string | null | undefined;
+} & ({
+    actions?: undefined;
+    home?: string | {
+        href: string;
+        label: string;
+    } | undefined;
+} | {
+    actions?: ((this: void) => typeof import("svelte").SnippetReturn & {
+        _: "functions passed to {@render ...} tags must use the `Snippet` type imported from \"svelte\"";
+    }) | undefined;
+    home?: undefined;
+}), {
+    [evt: string]: CustomEvent<any>;
+}, {}, Record<string, any>, "">;
+type ErrorPage = InstanceType<typeof ErrorPage>;
+export default ErrorPage;
