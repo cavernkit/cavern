@@ -13,7 +13,7 @@ const config: StorybookConfig = {
             titlePrefix: "Admin",
         },
     ],
-    staticDirs: ['../static'],
+    staticDirs: ["../static"],
     core: { disableWhatsNewNotifications: true },
     addons: ["@storybook/addon-links", "@storybook/addon-essentials", "@storybook/addon-interactions"],
     framework: { name: "@storybook/sveltekit", options: {} },

@@ -1,4 +1,4 @@
-import type { Snippet } from "svelte";
+/// <reference types="svelte" />
 interface $$__sveltets_2_IsomorphicComponent<Props extends Record<string, any> = any, Events extends Record<string, any> = any, Slots extends Record<string, any> = any, Exports = {}, Bindings = string> {
     new (options: import('svelte').ComponentConstructorOptions<Props>): import('svelte').SvelteComponent<Props, Events, Slots> & {
         $$bindings?: Bindings;
@@ -12,7 +12,9 @@ interface $$__sveltets_2_IsomorphicComponent<Props extends Record<string, any> =
 declare const YStack: $$__sveltets_2_IsomorphicComponent<{
     spacing?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | undefined;
     class?: string | undefined;
-    children: Snippet;
+    children?: ((this: void) => typeof import("svelte").SnippetReturn & {
+        _: "functions passed to {@render ...} tags must use the `Snippet` type imported from \"svelte\"";
+    }) | undefined;
 }, {
     [evt: string]: CustomEvent<any>;
 }, {}, Record<string, any>, "">;

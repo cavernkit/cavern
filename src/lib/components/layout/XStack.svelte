@@ -10,12 +10,14 @@
         spacing?: "none" | "xs" | "sm" | "md" | "lg" | "xl";
         justify?: "left" | "center" | "right";
         class?: string;
-        children: Snippet;
+        children?: Snippet;
     } = $props();
 </script>
 
 <div class={className ? `XStack ${className}` : "XStack"} data-spacing={spacing} data-justify={justify}>
-    {@render children()}
+    {#if children}
+        {@render children()}
+    {/if}
 </div>
 
 <style global>

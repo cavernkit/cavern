@@ -8,12 +8,14 @@
     }: {
         spacing?: "none" | "xs" | "sm" | "md" | "lg" | "xl";
         class?: string;
-        children: Snippet;
+        children?: Snippet;
     } = $props();
 </script>
 
 <div class={className ? `YStack ${className}` : "YStack"} data-spacing={spacing}>
-    {@render children()}
+    {#if children}
+        {@render children()}
+    {/if}
 </div>
 
 <style global>

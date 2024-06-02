@@ -128,7 +128,7 @@ function filterOnClient(all) {
         .ListPage__layout > :global(.Table) {
             flex-grow: 1;
         }
-        
+
         /* @TODO pretty styles */
         .ListPage__filters {
             width: 250px;

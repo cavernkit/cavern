@@ -10,20 +10,20 @@ export function toSmartSearch(search: string) {
     // Implementation copied from JQuery Datatables (MIT License)
     // https://github.com/DataTables/DataTablesSrc/blob/1.13.9/js/core/core.filter.js#L287
 
-    const terms = search.match(/["\u201C][^"\u201D]+["\u201D]|[^ ]+/g) || [''];
+    const terms = search.match(/["\u201C][^"\u201D]+["\u201D]|[^ ]+/g) || [""];
     const expressions = terms.map((word) => {
         if (word.charAt(0) === '"') {
             const m = word.match(/^"(.*)"$/);
             word = m ? m[1] : word;
-        } else if (word.charAt(0) === '\u201C') {
+        } else if (word.charAt(0) === "\u201C") {
             const m = word.match(/^\u201C(.*)\u201D$/);
             word = m ? m[1] : word;
         }
-        return word.replace('"', '');
+        return word.replace('"', "");
     });
 
     return new RegExp(
-        '^(?=.*?' + expressions.join(')(?=.*?') + ').*$',
-        'im', // multiline and case-insensitive
+        "^(?=.*?" + expressions.join(")(?=.*?") + ").*$",
+        "im", // multiline and case-insensitive
     );
 }

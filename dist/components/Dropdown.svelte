@@ -6,15 +6,7 @@ let {
 } = $props();
 </script>
 
-<Popup
-    class="Dropdown"
-    role="menu"
-    arrow={false}
-    trigger="click"
-    interactive
-    {placement}
-    bind:open
->
+<Popup class="Dropdown" role="menu" arrow={false} trigger="click" interactive {placement} bind:open>
     <ul>
         {@render children()}
     </ul>

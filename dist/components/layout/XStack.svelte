@@ -7,7 +7,9 @@
 </script>
 
 <div class={className ? `XStack ${className}` : "XStack"} data-spacing={spacing} data-justify={justify}>
-    {@render children()}
+    {#if children}
+        {@render children()}
+    {/if}
 </div>
 
 <style global>

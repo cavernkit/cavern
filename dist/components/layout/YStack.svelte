@@ -6,7 +6,9 @@
 </script>
 
 <div class={className ? `YStack ${className}` : "YStack"} data-spacing={spacing}>
-    {@render children()}
+    {#if children}
+        {@render children()}
+    {/if}
 </div>
 
 <style global>

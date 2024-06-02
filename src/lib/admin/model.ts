@@ -13,13 +13,13 @@ export type FormPayload<T> = {
 
 type ListModel<T> = {
     listFields: { [key: string]: Field };
-    listFeatures?: { sort?: boolean, paginate?: boolean, filter?: boolean, search?: boolean };
+    listFeatures?: { sort?: boolean; paginate?: boolean; filter?: boolean; search?: boolean };
     listDisplay: string[];
     list(params?: {
-        sort?: string,
-        page?: { offset?: number; limit?: number },
-        filter?: { [key: string]: string | number | boolean | null },
-        search?: string,
+        sort?: string;
+        page?: { offset?: number; limit?: number };
+        filter?: { [key: string]: string | number | boolean | null };
+        search?: string;
     }): Promise<ListPayload<T>> | ListPayload<T>;
 };
 
@@ -38,7 +38,7 @@ export type AdminModel<TList = any, TForm = TList> = { name: string } & ListMode
 export type Field = {
     type: FieldType;
     enum?: string[];
-    references?: { model: ListModel<any>, foreignKey: string, nameKey?: string },
+    references?: { model: ListModel<any>; foreignKey: string; nameKey?: string };
 };
 
 export type FieldType =

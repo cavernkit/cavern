@@ -13,7 +13,7 @@ type Story = StoryObj<typeof metadata>;
 export const Page: Story = {
     args: {
         model: {
-            name: 'user',
+            name: "user",
             listDisplay: ["id", "email", "password", "profile_image_url"],
             listFields: {
                 id: { type: "uuid" },

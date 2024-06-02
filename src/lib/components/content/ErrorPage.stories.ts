@@ -14,15 +14,15 @@ type Story = StoryObj<typeof metadata>;
 
 export const Error404: Story = {
     args: {
-        title: 'Page not found',
+        title: "Page not found",
         status: 404,
-        message: 'Sorry, we couldn’t find the page you’re looking for.',
-    }
+        message: "Sorry, we couldn’t find the page you’re looking for.",
+    },
 };
 
 export const ErrorMinimal: Story = {
     args: {
         color: "error",
-        title: 'Oh no! Bad stuff.',
-    }
+        title: "Oh no! Bad stuff.",
+    },
 };

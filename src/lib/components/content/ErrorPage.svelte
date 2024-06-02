@@ -4,15 +4,15 @@
     import Icon from "../icons/Icon.svelte";
 
     type Actions =
-        | { actions?: never; home?: string | { href: string; label: string } }
-        | { actions?: Snippet; home?: never };
+        | { children?: never; home?: string | { href: string; label: string } }
+        | { children?: Snippet; home?: never };
 
     let {
         title,
         status,
         message,
         home = "/",
-        actions,
+        children,
     }: {
         title: string;
         status?: number | string | null;
@@ -32,15 +32,16 @@
             </p>
         {/if}
         <div class="ErrorPage__actions">
-            {#if actions}
-                {@render actions()}
+            {#if children}
+                {@render children()}
             {:else if typeof home === "string"}
                 <Button color="link" href={home} label="Go back home">
                     <Icon name="arrow-left" size="xs" /> Go back home
                 </Button>
             {:else}
                 <Button color="link" href={home.href} label={home.label}>
-                    <Icon name="arrow-left" size="xs" /> {home.label}
+                    <Icon name="arrow-left" size="xs" />
+                    {home.label}
                 </Button>
             {/if}
         </div>

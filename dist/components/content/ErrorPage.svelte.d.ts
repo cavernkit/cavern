@@ -14,13 +14,13 @@ declare const ErrorPage: $$__sveltets_2_IsomorphicComponent<{
     status?: string | number | null | undefined;
     message?: string | null | undefined;
 } & ({
-    actions?: undefined;
+    children?: undefined;
     home?: string | {
         href: string;
         label: string;
     } | undefined;
 } | {
-    actions?: ((this: void) => typeof import("svelte").SnippetReturn & {
+    children?: ((this: void) => typeof import("svelte").SnippetReturn & {
         _: "functions passed to {@render ...} tags must use the `Snippet` type imported from \"svelte\"";
     }) | undefined;
     home?: undefined;

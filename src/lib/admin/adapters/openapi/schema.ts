@@ -1,7 +1,7 @@
 export type OpenApiSpec = {
     components: {
-        schemas: { [key: string]: OpenApiSchema }
-    }
+        schemas: { [key: string]: OpenApiSchema };
+    };
 };
 
 export type OpenApiSchema =

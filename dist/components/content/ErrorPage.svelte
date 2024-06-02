@@ -5,7 +5,7 @@ let {
   status,
   message,
   home = "/",
-  actions
+  children
 } = $props();
 </script>
 
@@ -21,15 +21,16 @@ let {
             </p>
         {/if}
         <div class="ErrorPage__actions">
-            {#if actions}
-                {@render actions()}
+            {#if children}
+                {@render children()}
             {:else if typeof home === "string"}
                 <Button color="link" href={home} label="Go back home">
                     <Icon name="arrow-left" size="xs" /> Go back home
                 </Button>
             {:else}
                 <Button color="link" href={home.href} label={home.label}>
-                    <Icon name="arrow-left" size="xs" /> {home.label}
+                    <Icon name="arrow-left" size="xs" />
+                    {home.label}
                 </Button>
             {/if}
         </div>
