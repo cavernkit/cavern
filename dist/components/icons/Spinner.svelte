@@ -8,7 +8,7 @@ let {
 } = $props();
 </script>
 
-<Icon name="spinner" class={className ? `Spinner ${className}` : "uipinner"} {role} {size} {color} {label} />
+<Icon name="spinner" class={className ? `Spinner ${className}` : "Spinner"} {role} {size} {color} {label} />
 
 <style>
     @layer base {
