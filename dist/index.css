@@ -1,0 +1,96 @@
+@layer base {
+    body {
+        font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+            "Noto Color Emoji";
+    }
+}
+
+:root {
+    /** Theme */
+    --theme-primary-bg: #e0e7ff;
+    --theme-primary-hover: #6366f1;
+    --theme-primary-fg: #4f46e5;
+    --theme-primary-dark: #3730a3;
+    --theme-text-base: #0f172a;
+    --theme-text-light: rgb(107, 114, 128);
+    --theme-text-disabled: #9ca3af;
+    --theme-gray-bg: #e2e8f0;
+    --theme-gray-fg: #cbd5e1;
+    --theme-gray-dark: #334155;
+    --theme-button-hover: #f1f5f9;
+    --theme-button-active: #e2e8f0;
+    --theme-border-dark: #cbd5e1;
+    --theme-border-light: color-mix(in srgb, var(--theme-border-dark), transparent 50%);
+    --theme-error-bg: #ffe4e6;
+    --theme-error-fg: #f43f5e;
+    --theme-error-dark: #be123c;
+    --theme-warning-bg: #fef3c7;
+    --theme-warning-fg: #fbbf24;
+    --theme-warning-dark: #d97706;
+    --theme-success-bg: #d1fae5;
+    --theme-success-fg: #10b981;
+    --theme-success-dark: #059669;
+    --theme-info-bg: #e0f2fe;
+    --theme-info-fg: #0ea5e9;
+    --theme-info-dark: #0369a1;
+
+    /** Web */
+    --html-input-validation: rgb(252, 131, 40);
+
+    /** Z-Index */
+    --z-toast: 100;
+    --z-modal: 90;
+    --z-modal-shadow: 89;
+    --z-window: 80;
+    --z-tooltip: 10;
+    --z-td-focus: 5;
+    --z-td-sticky: 4;
+    --z-td-hover: 3;
+
+    /** Font weight */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /** Font size */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 2rem;
+    --font-size-4xl: 2.5rem;
+
+    /** Line Height **/
+    --line-height-xs: 1rem;
+    --line-height-sm: 1.25rem;
+    --line-height-base: 1.5rem;
+    --line-height-lg: 1.75rem;
+    --line-height-xl: 1.75rem;
+    --line-height-2xl: 2.25rem;
+
+    /** Padding, Margin and Flex Gap */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-inset: 0.75rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+
+    /** Border radius */
+    --rounded-md: 0.375rem; /* badges */
+    --rounded-lg: 0.5rem; /* inputs */
+    --rounded-xl: 0.75rem; /* cards */
+
+    /** Shadow */
+    /*
+        Smaller shadows are darker and thinner.
+        Larger shadows are lighter and wider.
+    */
+    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}

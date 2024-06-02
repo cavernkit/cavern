@@ -1,0 +1,84 @@
+{
+  "name": "@cavernkit/cavern",
+  "type": "module",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "A UI component library for Svelte.",
+  "homepage": "https://github.com/cavernkit/cavern#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cavernkit/cavern.git"
+  },
+  "author": "Kevin Stenerson <developer@stenerson.me>",
+  "bugs": {
+    "url": "https://github.com/cavernkit/cavern/issues"
+  },
+  "engines": {
+    "node": "^20.12.1",
+    "pnpm": "^9.1.2"
+  },
+  "volta": {
+    "node": "20.12.1",
+    "pnpm": "9.1.2"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "svelte": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./stores/toasts": {
+      "svelte": "./dist/stores/toasts.js",
+      "types": "./dist/stores/toasts.d.ts"
+    },
+    "./stores/location": {
+      "svelte": "./dist/stores/location.js",
+      "types": "./dist/stores/location.d.ts"
+    },
+    "./utils/dom": {
+      "import": "./dist/uikit/utils/dom.js",
+      "types": "./dist/uikit/stores/toasts.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "rm -rf ./dist .svelte-kit node_modules/.vite && svelte-kit sync && svelte-package && find ./dist -name '*.stories*' -delete",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write .",
+    "storybook": "storybook dev -p 6006"
+  },
+  "dependencies": {
+    "@floating-ui/dom": "^1.6.5"
+  },
+  "peerDependencies": {
+    "svelte": "^5.0.0-next.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^8.1.5",
+    "@storybook/addon-interactions": "^8.1.5",
+    "@storybook/addon-links": "^8.1.5",
+    "@storybook/blocks": "^8.1.5",
+    "@storybook/svelte": "^8.1.5",
+    "@storybook/sveltekit": "^8.1.5",
+    "@storybook/test": "^8.1.5",
+    "@sveltejs/kit": "^2.5.10",
+    "@sveltejs/package": "^2.3.1",
+    "@sveltejs/vite-plugin-svelte": "^3.1.1",
+    "eslint": "^9.4.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-storybook": "^0.8.0",
+    "eslint-plugin-svelte": "^2.36.0-next.4",
+    "globals": "^15.3.0",
+    "prettier": "^3.3.0",
+    "prettier-plugin-svelte": "^3.1.2",
+    "storybook": "^8.1.5",
+    "svelte": "^5.0.0-next.1",
+    "svelte-check": "^3.8.0",
+    "typescript": "^5.0.0",
+    "typescript-eslint": "^8.0.0-alpha.24",
+    "vite": "^5.2.12"
+  }
+}
