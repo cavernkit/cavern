@@ -103,7 +103,7 @@ function filterOnClient(all) {
                 <tr>
                     <td colspan={model.listDisplay.length}>
                         Showing {visible.length} of {total}
-                        {total > 1 ? pluralize(model.name) : model.name}
+                        {total > 1 ? pluralize(humanize(model.name)) : humanize(model.name)}
                     </td>
                 </tr>
             {/snippet}
@@ -121,11 +121,12 @@ function filterOnClient(all) {
 <style>
     @layer components {
         .ListPage__layout {
+            width: 100%;
             display: flex;
             align-items: start;
             gap: var(--spacing-lg);
         }
-        .ListPage__layout > :global(.Table) {
+        .ListPage__layout > :global(*:first-child) {
             flex-grow: 1;
         }
 
