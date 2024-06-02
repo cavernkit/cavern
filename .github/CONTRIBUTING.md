@@ -19,5 +19,5 @@ pnpm install
 View the UIKit documentation in storybook
 
 ```sh
-pnpm storybook
+pnpm run docs
 ```
