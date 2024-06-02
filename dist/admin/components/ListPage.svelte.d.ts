@@ -12,6 +12,7 @@ interface $$__sveltets_2_IsomorphicComponent<Props extends Record<string, any> =
 }
 declare const ListPage: $$__sveltets_2_IsomorphicComponent<{
     model: AdminModel;
+    class?: string | undefined;
 }, {
     [evt: string]: CustomEvent<any>;
 }, {}, Record<string, any>, "">;

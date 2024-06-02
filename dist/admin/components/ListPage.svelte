@@ -2,7 +2,10 @@
 import { humanize, pluralize } from "../utils/inflection";
 import ModelCell from "./list/ModelCell.svelte";
 import { toSmartSearch } from "../utils/search";
-let { model } = $props();
+let {
+  model,
+  class: className
+} = $props();
 let paginate = $derived(model.listFeatures?.paginate);
 let filters = $derived(
   !model.listFeatures?.paginate || model.listFeatures.filter ? model.listDisplay.map((x) => model.listFields[x]).filter((x) => x.type === "enum" || x.references) : []
@@ -74,7 +77,7 @@ function filterOnClient(all) {
 }
 </script>
 
-<div class="ListPage__layout">
+<div class={className ? `ListPage__layout ${className}` : "ListPage__layout"}>
     <YStack spacing="md">
         {#if !model.listFeatures?.paginate || model.listFeatures?.search}
             <div class="ListPage__search">

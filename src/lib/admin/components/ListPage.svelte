@@ -5,7 +5,13 @@
     import ModelCell from "./list/ModelCell.svelte";
     import { toSmartSearch } from "../utils/search";
 
-    let { model }: { model: AdminModel } = $props();
+    let {
+        model,
+        class: className,
+    }: {
+        model: AdminModel;
+        class?: string;
+    } = $props();
     let paginate = $derived(model.listFeatures?.paginate);
     let filters = $derived(
         !model.listFeatures?.paginate || model.listFeatures.filter
@@ -82,7 +88,7 @@
     }
 </script>
 
-<div class="ListPage__layout">
+<div class={className ? `ListPage__layout ${className}` : "ListPage__layout"}>
     <YStack spacing="md">
         {#if !model.listFeatures?.paginate || model.listFeatures?.search}
             <div class="ListPage__search">
