@@ -10,6 +10,7 @@ const config: StorybookConfig = {
         },
     ],
     staticDirs: ['../static'],
+    core: { disableWhatsNewNotifications: true },
     addons: ["@storybook/addon-links", "@storybook/addon-essentials", "@storybook/addon-interactions"],
     framework: { name: "@storybook/sveltekit", options: {} },
     async viteFinal(config) {
