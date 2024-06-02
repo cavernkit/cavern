@@ -9,6 +9,7 @@ const config: StorybookConfig = {
             titlePrefix: "Components",
         },
     ],
+    staticDirs: ['../static'],
     addons: ["@storybook/addon-links", "@storybook/addon-essentials", "@storybook/addon-interactions"],
     framework: { name: "@storybook/sveltekit", options: {} },
     async viteFinal(config) {
