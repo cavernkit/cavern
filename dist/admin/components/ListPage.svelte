@@ -30,13 +30,19 @@ $effect(() => {
 });
 let visible = $derived(paginate ? data : filterOnClient(data));
 let total = $derived(paginate ? meta.total ?? data.length : visible.length);
+let searchCache = /* @__PURE__ */ new WeakMap();
 function filterOnClient(all) {
   let result = all.slice();
   if (search) {
     result = [];
     let pattern = toSmartSearch(search);
     for (const row of all) {
-      if (pattern.test(JSON.stringify(row))) {
+      let text = searchCache.get(row);
+      if (!text) {
+        text = JSON.stringify(row);
+        searchCache.set(row, text);
+      }
+      if (pattern.test(text)) {
         result.push(row);
       }
     }

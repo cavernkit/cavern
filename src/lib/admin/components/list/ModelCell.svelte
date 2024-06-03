@@ -1,5 +1,6 @@
 <script lang="ts">
     import type { Field } from "$lib/admin/model";
+    import { TableDateTimeFormat } from "$lib/admin/utils/format";
 
     let {
         row,
@@ -18,6 +19,10 @@
     {#if isSensitive}
         {#if row[col]}
             ••••••••
+        {/if}
+    {:else if field.type === "datetime"}
+        {#if row[col]}
+            {TableDateTimeFormat.format(Date.parse(row[col]))}
         {/if}
     {:else if field.type !== "any"}
         {row[col]}

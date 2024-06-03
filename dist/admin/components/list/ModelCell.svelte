@@ -1,4 +1,5 @@
-<script lang="ts">let {
+<script lang="ts">import { TableDateTimeFormat } from "../../utils/format";
+let {
   row,
   col,
   field
@@ -11,6 +12,10 @@ const isSensitive = field.type === "password" || col === "password" || col.inclu
     {#if isSensitive}
         {#if row[col]}
             ••••••••
+        {/if}
+    {:else if field.type === "datetime"}
+        {#if row[col]}
+            {TableDateTimeFormat.format(Date.parse(row[col]))}
         {/if}
     {:else if field.type !== "any"}
         {row[col]}
